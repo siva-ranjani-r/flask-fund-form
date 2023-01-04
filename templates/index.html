@@ -1,0 +1,24 @@
+<html>
+    <body>
+        {{data}}
+        <form  method="POST">
+            <input type="text" name="input" required="1" placeholder="Enter The fund ID"><br>
+            <input type="submit" value="submit"><br>
+        </form>
+          <table border="1">
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Nav</th>
+                
+              </tr>
+            {% for i in data %}
+              <tr>
+                <td>{{i.get("id")}}</td>
+                <td>{{i.get("fund_house")}}</td>
+                <td>{{i.get("scheme_code")}}</td>
+              </tr>
+              {%endfor%}
+            </table>
+</body>
+</html>
